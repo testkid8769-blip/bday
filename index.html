@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FLOATING HEARTS -->
+<div class="hearts"></div>
+
+<!-- COUNTDOWN -->
+<div class="screen active">
+  <h1>Countdown Begins ⏳</h1>
+  <div id="timer">Loading...</div>
+</div>
+
+<!-- BIRTHDAY BLAST -->
+<div class="screen birthday">
+  <h1>
+    HAPPY BIRTHDAY 
+    <span id="nameReveal" class="reveal-name"></span> 
+    🎉🎂
+  </h1>
+
+  <div id="ageReveal" class="reveal-age"></div>
+
+  <p>It's finally your day 💖✨</p>
+  
+  <!-- Confetti -->
+  <canvas id="confetti"></canvas>
+  <!-- Fireworks -->
+  <canvas id="fireworks"></canvas>
+
+  <button onclick="next()">Next ➜</button>
+</div>
+
+<!-- INTRO -->
+<div class="screen">
+  <h1>Hey You 💕</h1>
+  <p>I made something special just for you…</p>
+  <button onclick="next()">Next ➜</button>
+</div>
+
+<!-- CAKE TIME -->
+<div class="screen cake-time">
+  <h1>It's Cake Time! 🍰</h1>
+  <p>Make your birthday wish come true!</p>
+
+  <div class="cake-container">
+    <p>Cut your birthday cake, birthday girl! ✂️</p>
+
+    <!-- Cake image -->
+    <div class="cake" id="cake">
+      <img src="images/cake.jpg" alt="Birthday Cake">
+      <div class="drag-line">Click here to cut!</div>
+      <!-- Optional: slice animation can go here -->
+    </div>
+  </div>
+
+  <button onclick="next()">Next ➜</button>
+</div>
+
+<!-- SPECIAL -->
+<div class="screen">
+  <h1>You’re Special 💖</h1>
+
+  <!-- CALENDAR -->
+  <div class="calendar">
+    <div class="calendar-header">
+      <span>Jan 2026</span>
+    </div>
+    <div class="calendar-grid">
+      <!-- Days 1 to 31 -->
+      <span>1</span><span>2</span><span>3</span><span>4</span>
+      <span>5</span><span>6</span><span>7</span><span>8</span>
+      <span>9</span><span>10</span><span>11</span>
+      <span class="marked">12</span> <!-- birthday marked -->
+      <span>13</span><span>14</span><span>15</span><span>16</span>
+      <span>17</span><span>18</span><span>19</span><span>20</span>
+      <span>21</span><span>22</span><span>23</span><span>24</span>
+      <span>25</span><span>26</span><span>27</span><span>28</span>
+      <span>29</span><span>30</span><span>31</span>
+    </div>
+  </div>
+
+  <button onclick="next()">Next ➜</button>
+</div>
+
+<!-- MUSIC -->
+<div class="screen">
+  <h1>Your Songs 🎶</h1>
+
+  <div class="song" onclick="playSong(0)">
+    <img src="images/song1.jpg" alt="Song 1">
+    <div><strong>Aphroidite</strong><br><span>Arjan Dhillon</span></div>
+  </div>
+
+  <div class="song" onclick="playSong(1)">
+    <img src="images/song2.jpg" alt="Song 2">
+    <div><strong>For A Reason</strong><br><span>Karan Aujla</span></div>
+  </div>
+
+  <div class="song" onclick="playSong(2)">
+    <img src="images/song3.jpg" alt="Song 3">
+    <div><strong>Gallan 4</strong><br><span>Talwinder</span></div>
+  </div>
+
+  <div class="song" onclick="playSong(3)">
+    <img src="images/song4.jpg" alt="Song 4">
+    <div><strong>Haseen</strong><br><span>Talwinder</span></div>
+  </div>
+
+  <div class="song" onclick="playSong(4)">
+    <img src="images/song5.jpg" alt="Song 5">
+    <div><strong>Pretty Little Baby</strong><br><span>Connie Francis</span></div>
+  </div>
+
+  <button onclick="next()">Next ➜</button>
+</div>
+
+<!-- ENVELOPE -->
+<div class="screen">
+  <div class="envelope" onclick="openEnvelope()">
+    <div class="flap"></div>
+    <div class="letter">
+      <h2>Just For You 💌</h2>
+      <p class="letter-text">
+        Happy birthday Miss Malhotra 💗💗!  
+        You make my life better, and I am so grateful to have you in my past, present, and future.  
+        My love, I hope this day will be the best day of your life and last.  
+        You truly mean the world to me 💗☺️  
+        Once again, happiest birthday ever 💗🤗
+      </p>
+    </div>
+  </div>
+  <button onclick="next()">Next ➜</button>
+</div>
+
+<!-- FINAL -->
+<div class="screen final-letter">
+  <h1>Final Birthday Letter 💌</h1>
+  <p>A special message sealed with love ❤️</p>
+
+  <div class="letter-box">
+    <h2>Birthday Letter Sealed with Love</h2>
+    <p>Happy Birthday, My Everything 🎉</p>
+    <p>Forever Yours, Happy Birthday! ❤️🍰</p>
+    <p class="date">Monday, January 12, 2026</p>
+  </div>
+
+  <button id="sendKissesBtn">Send Birthday Kisses 💋</button>
+</div>
+
+<!-- AUDIO -->
+<audio src="music/song1.mp3"></audio>
+<audio src="music/song2.mp3"></audio>
+<audio src="music/song3.mp3"></audio>
+<audio src="music/song4.mp3"></audio>
+<audio src="music/song5.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
